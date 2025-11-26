@@ -7,7 +7,7 @@ function About() {
       {/* Top Header */}
       <div
         className="w-full flex justify-center md:px-20 px-5 py-5 
-        bg-gradient-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
+        bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
         text-white shadow-lg"
       >
         <h1 className="flex gap-4 font-bold text-3xl md:text-5xl text-white">
@@ -19,7 +19,7 @@ function About() {
       <div
         className="w-full flex flex-col md:flex-row items-center 
         justify-between md:px-20 px-5 py-10 
-        bg-gradient-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
+        bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
         text-white shadow-lg"
       >
         {/* Left Image */}
