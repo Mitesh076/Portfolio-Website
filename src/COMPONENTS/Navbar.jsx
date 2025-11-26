@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav
       className="w-full flex items-center justify-between md:px-20 px-5 py-5 
-      bg-gradient-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
+      bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
       text-white fixed top-0 left-0 z-50 shadow-lg"
     >
       {/* Logo */}

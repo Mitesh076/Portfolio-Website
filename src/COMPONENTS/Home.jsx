@@ -9,7 +9,7 @@ import { IoMdMailUnread } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa6";
 import Typed from "typed.js";
 
-function HOME() {
+function Home() {
   const typedRef = useRef(null);
 
   useEffect(() => {
@@ -51,20 +51,20 @@ function HOME() {
   return (
     <div
       ref={vantaRef}
-      className="w-full min-h-screen flex items-center pt-28 md:pt-0"
+      className="w-full min-h-screen  flex items-center pt-28 md:pt-10"
     >
-      <div className="w-full flex flex-col md:flex-row  md:p-20 px-5">
+      <div className="w-full flex flex-col  md:flex-row  md:p-15 px-5">
         {/* LEFT CONTENT */}
-        <div className="w-full md:w-1/2 md:ml-10 text-center md:mt-30 md:text-left">
-          <h1 className="font-bold text-4xl md:text-7xl text-white mt-3">
+        <div className="w-full md:w-1/2 md:ml-10 text-center md:mt-25 md:text-left">
+          <h1 className="font-bold text-4xl md:text-5xl text-white mt-3">
             Hi, I am
           </h1>
 
-          <h1 className="font-bold text-4xl md:text-7xl text-orange-400 mt-3">
+          <h1 className="font-bold text-4xl md:text-5xl text-orange-400 mt-3">
             Mitesh Bharvad
           </h1>
 
-          <h1 className="font-bold text-3xl md:text-5xl text-white mt-3">
+          <h1 className="font-bold text-3xl md:text-3xl text-white mt-3">
             I am a <span ref={typedRef} className="text-red-400"></span>
           </h1>
 
@@ -91,7 +91,7 @@ function HOME() {
               <div
                 key={index}
                 className="p-4 md:p-5 border-2 rounded-full shadow-blue-600 shadow-xl 
-                hover:bg-blue-600 bg-blue-800 text-white text-4xl md:text-6xl"
+                hover:bg-blue-600 bg-blue-800 text-white text-4xl md:text-4xl"
               >
                 {Icon}
               </div>
@@ -102,7 +102,7 @@ function HOME() {
         {/* RIGHT IMAGE */}
         <div className="w-full md:w-1/2 flex justify-center mt-10 md:mt-15">
           <img
-            className="h-72 w-72 md:h-160 md:w-160 object-cover shadow-xl rounded-full border-4 border-white/20"
+            className="h-72 w-72 md:h-120 md:w-120 object-cover shadow-xl rounded-full border-4 border-white/20"
             src="/src/IMAGES/P1.jpg"
             alt="profile"
           />
@@ -112,4 +112,4 @@ function HOME() {
   );
 }
 
-export default HOME;
+export default Home;
