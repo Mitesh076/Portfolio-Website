@@ -8,7 +8,7 @@ function About() {
       <div
         className="w-full flex justify-center md:px-20 px-5 py-5 
         bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
-        text-white shadow-lg"
+        text-white shadow-lg border-t  border-[#59323f]"
       >
         <h1 className="flex gap-4 font-bold text-3xl md:text-5xl text-white">
           <FaUser /> About Me
@@ -20,7 +20,7 @@ function About() {
         className="w-full flex flex-col md:flex-row items-center 
         justify-between md:px-20 px-5 py-10 
         bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
-        text-white shadow-lg"
+        text-white shadow-lg "
       >
         {/* Left Image */}
         <div className="w-full md:w-1/2 flex justify-center mt-5 md:mt-10">
