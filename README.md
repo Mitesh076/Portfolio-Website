@@ -58,7 +58,8 @@ Hi, I’m **Mitesh**, a passionate **Full Stack Developer (MERN Stack)** who lov
 ## 📬 Contact Me
 
 - 📧 Email: [miteshbharvad733@gmail.com](mailto:miteshbharvad733@gmail.com)
-- 📞 Phone: [9081611867](tel:+919081611867)
+- 📞 Phone: [+91 90816111867](tel:+919081611867)
+- 💬 WhatsApp: https://wa.me/919081611867
 - 🌍 Location: [Anand, Gujarat, India](https://www.google.com/maps/place/Anand,+Gujarat)
 
 ---
