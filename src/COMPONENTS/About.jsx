@@ -34,7 +34,9 @@ function About() {
 
         {/* Right Content */}
         <div className="w-full md:w-1/2 mt-10 md:ml-10 text-center md:text-left">
-          <h1 className="font-bold text-3xl md:text-5xl">I'm Mitesh</h1>
+          <h1 className="font-bold text-3xl md:text-5xl">
+            I'm <span className="text-orange-400">Mitesh</span>
+          </h1>
 
           <h1 className="font-semibold text-2xl md:text-3xl mt-3">
             Web Developer
