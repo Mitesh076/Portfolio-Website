@@ -1,32 +1,26 @@
 import React from "react";
-import { FaBriefcase } from "react-icons/fa";
+import { FaBriefcase, FaMapMarkerAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function Experience() {
   const experiences = [
     {
-      company: "Self Employed",
-      role: "Full Stack Developer",
-      date: "Oct 2021 - Present",
+      company: "BrainyBeam Technologies Pvt. Ltd.",
+      role: "MERN Stack Developer | Internship",
+      date: "May 2025 - June 2025",
+      location: "Ahmedabad",
+      companyLink: "https://brainybeam.com/index.html",
+      locationLink: "https://www.google.com/maps?q=Ahmedabad,Gujarat",
+      logo: "BB.png",
     },
     {
-      company: "Mapstreak Flyseas",
+      company: "Jinarth Infotech",
       role: "Web Developer | Internship",
-      date: "June 2021 - Dec 2021",
-    },
-    {
-      company: "The Spark Foundation",
-      role: "Website Developer | Internship",
-      date: "May 2021 - June 2021",
-    },
-    {
-      company: "The Spark Foundation",
-      role: "Mobile Application Developer | Internship",
-      date: "April 2021 - May 2021",
-    },
-    {
-      company: "Frshr Technologies",
-      role: "WordPress Developer | Internship",
-      date: "April 2021",
+      date: "Dec 2025 - Apr 2026",
+      location: "Anand",
+      companyLink: "https://www.jinarthinfotech.com/",
+      locationLink: "https://www.google.com/maps?q=Anand,Gujarat",
+      logo: "JI.png",
     },
   ];
 
@@ -34,60 +28,138 @@ function Experience() {
     <section
       id="experience"
       className="w-full py-24 px-5 md:px-20
+       border-t border-b border-[#59323f]
       bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]"
     >
       {/* Heading */}
       <div className="text-center text-white mb-20">
-        <h2 className="text-5xl font-bold flex justify-center items-center gap-3">
-          <FaBriefcase />
+        <h2 className="text-5xl font-bold text-orange-400 flex justify-center items-center gap-3">
+          <FaBriefcase className="" />
           Experience
         </h2>
       </div>
 
-      {/* Timeline */}
       <div className="relative max-w-6xl mx-auto">
-        {/* vertical line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-white/40"></div>
+        {/* Timeline Line */}
+        <motion.div
+          initial={{ height: 0 }}
+          whileInView={{ height: "100%" }}
+          transition={{ duration: 1 }}
+          className="absolute left-1/2 top-0 -translate-x-1/2 w-0.5 bg-white/30"
+        />
 
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className={`mb-16 flex items-center ${
-              index % 2 === 0 ? "justify-start" : "justify-end"
-            }`}
-          >
-            {/* Card */}
+        {experiences.map((exp, index) => {
+          const isLeft = index % 2 === 0;
+
+          return (
             <div
-              className="relative w-full md:w-5/12
-              bg-[#f7931e] text-black
-              p-6 rounded-xl shadow-xl
-              transform transition duration-500
-              hover:scale-105 hover:shadow-2xl"
+              key={index}
+              className="relative grid md:grid-cols-2 items-center mb-16"
             >
-              <h3 className="text-xl font-bold">{exp.company}</h3>
-              <p className="font-semibold">{exp.role}</p>
-              <p className="text-sm">{exp.date}</p>
+              {/* RIGHT SIDE */}
+              <div className="flex justify-start md:pr-6 ">
+                {!isLeft && (
+                  <motion.div
+                    initial={{ opacity: 0, x: 80 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full md:w-[90%]
+                    flex flex-col md:flex-row
+                    bg-[#111132]
+                    rounded-xl overflow-hidden
+                    border border-[#3a2f6a]
+                    shadow-lg hover:shadow-2xl
+                    transition-all duration-300"
+                  >
+                    {/* Logo */}
+                    <div className="w-full md:w-1/3 flex justify-center items-center bg-white p-4">
+                      <img src={exp.logo} alt="logo" className="w-20 h-20 " />
+                    </div>
 
-              {/* Arrow */}
-              <div
-                className={`absolute top-6 ${
-                  index % 2 === 0
-                    ? "-right-3 border-l-[#f7931e]"
-                    : "-left-3 border-r-[#f7931e]"
-                }
-                w-0 h-0 border-y-10 border-y-transparent
-                ${index % 2 === 0 ? "border-l-15" : "border-r-15"}`}
-              ></div>
+                    {/* Content */}
+                    <div className="p-5 flex flex-col justify-center text-center md:text-left text-white">
+                      <a
+                        href={exp.companyLink}
+                        target="_blank"
+                        className=" font-bold text-lg hover:underline hover:text-orange-400"
+                      >
+                        {exp.company}
+                      </a>
+
+                      <p className="font-semibold mt-1">{exp.role}</p>
+                      <p className="text-green-400 text-sm mt-1">{exp.date}</p>
+
+                      <a
+                        href={exp.locationLink}
+                        target="_blank"
+                        className="flex items-center justify-center md:justify-start gap-2 text-sm mt-2 text-gray-300 hover:text-orange-400"
+                      >
+                        <FaMapMarkerAlt /> {exp.location}
+                      </a>
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+
+              {/* LEFT SIDE */}
+              <div className="flex justify-end md:pl-6">
+                {isLeft && (
+                  <motion.div
+                    initial={{ opacity: 0, x: -80 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full md:w-[90%]
+                    flex flex-col md:flex-row
+                    bg-[#111132]
+                    rounded-xl overflow-hidden
+                    border border-[#3a2f6a]
+                    shadow-lg hover:shadow-2xl
+                    transition-all duration-300"
+                  >
+                    {/* Logo Section */}
+                    <div className="w-full md:w-1/3 flex justify-center items-center bg-white p-4">
+                      <img src={exp.logo} alt="logo" className="" />
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-5 flex flex-col justify-center text-center md:text-left text-white">
+                      <a
+                        href={exp.companyLink}
+                        target="_blank"
+                        className=" font-bold text-lg hover:underline hover:text-orange-400"
+                      >
+                        {exp.company}
+                      </a>
+
+                      <p className="font-semibold mt-1">{exp.role}</p>
+                      <p className="text-green-400 text-sm mt-1">{exp.date}</p>
+
+                      <a
+                        href={exp.locationLink}
+                        target="_blank"
+                        className="flex items-center justify-center md:justify-start gap-2 text-sm mt-2 text-gray-300 hover:text-orange-400"
+                      >
+                        <FaMapMarkerAlt /> {exp.location}
+                      </a>
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+
+              {/* DOT */}
+              <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                <div className="w-5 h-5 bg-orange-400 rounded-full border-4 border-[#222256] shadow-[0_0_20px_rgba(255,165,0,1)]"></div>
+              </div>
+
+              {/* CONNECTOR */}
+              {isLeft ? (
+                <div className="hidden md:block absolute top-1/2 left-1/2 w-20 h-0.5 bg-white/40 -translate-y-1/2"></div>
+              ) : (
+                <div className="hidden md:block absolute top-1/2 right-1/2 w-20 h-0.5 bg-white/40 -translate-y-1/2"></div>
+              )}
             </div>
-
-            {/* Timeline Dot */}
-            <div
-              className="absolute left-1/2 transform -translate-x-1/2
-              w-6 h-6 bg-[#f7931e] border-4 border-white rounded-full
-              shadow-[0_0_15px_rgba(255,165,0,0.9)]"
-            ></div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

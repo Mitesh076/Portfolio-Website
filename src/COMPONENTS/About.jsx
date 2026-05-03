@@ -3,15 +3,16 @@ import { FaUser, FaFileDownload } from "react-icons/fa";
 
 function About() {
   return (
-    <>
+    <div id="about">
       {/* Top Header */}
       <div
         className="w-full flex justify-center md:px-20 px-5 py-5 
         bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
-        text-white shadow-lg border-t  border-[#59323f]"
+        text-white shadow-lg border-t border-[#59323f]"
       >
         <h1 className="flex gap-4 font-bold text-3xl md:text-5xl text-white">
-          <FaUser /> About Me
+          <FaUser className="text-orange-400" />{" "}
+          <span className="text-orange-400">About</span>
         </h1>
       </div>
 
@@ -20,7 +21,7 @@ function About() {
         className="w-full flex flex-col md:flex-row items-center 
         justify-between md:px-20 px-5 py-10 
         bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
-        text-white shadow-lg "
+        text-white shadow-lg"
       >
         {/* Left Image */}
         <div className="w-full md:w-1/2 flex justify-center mt-5 md:mt-10">
@@ -48,30 +49,46 @@ function About() {
             real-world projects and continuous learning.
           </p>
 
+          {/* Email Link */}
           <h1 className="font-semibold text-lg md:text-xl mt-3">
             <span className="text-orange-500">Email : </span>
-            miteshbharvad733@gmail.com
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=miteshbharvad733@gmail.com&su=Portfolio visited Queries"
+              className="hover:underline hover:text-blue-300"
+            >
+              miteshbharvad733@gmail.com
+            </a>
           </h1>
 
+          {/* Location Link */}
           <h1 className="font-semibold text-lg md:text-xl mt-3">
             <span className="text-orange-500">Place : </span>
-            Anand, Gujarat
+            <a
+              href="https://www.google.com/maps?q=Anand,Gujarat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline hover:text-blue-300"
+            >
+              Anand, Gujarat
+            </a>
           </h1>
 
           {/* Resume Button */}
           <div className="w-full flex justify-center md:justify-start">
-            <button
+            <a
+              href="/MITESH.pdf" // 👉 put your resume in public folder
+              download
               className="flex items-center gap-3 p-3 px-5 border-2 rounded-full 
-              hover:bg-blue-600 bg-blue-700 mt-6
-              shadow-blue-600 shadow-md
+              hover:bg-orange-500 bg-[#0a0826] mt-6
+              shadow-[#0a0826] shadow-md
               text-white font-semibold text-lg md:text-xl"
             >
               Resume <FaFileDownload />
-            </button>
+            </a>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

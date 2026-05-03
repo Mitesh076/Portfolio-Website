@@ -1,7 +1,55 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [active, setActive] = useState("home");
+
+  // Sections list (must match your IDs in page)
+  const sections = [
+    "home",
+    "about",
+    "skills",
+    "education",
+    "work",
+    "experience",
+    "contact",
+  ];
+
+  // Scroll Active Feature
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.6, // adjust for accuracy
+      },
+    );
+
+    sections.forEach((section) => {
+      const el = document.getElementById(section);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        const el = document.getElementById(section);
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, []);
+
+  // Dynamic Class
+  const navLinkClass = (section) =>
+    `cursor-pointer transition-all duration-300 ${
+      active === section
+        ? "text-orange-400 border-b-4 border-orange-400"
+        : "hover:text-orange-400 hover:border-b-4 hover:border-orange-400"
+    }`;
 
   return (
     <nav
@@ -11,37 +59,31 @@ function Navbar() {
     >
       {/* Logo */}
       <div className="ml-5">
-        <img className="h-16" src="/src/IMAGES/MBLOGO1.png" alt="" />
+        <img
+          className="h-16 rounded-full"
+          src="/src/IMAGES/MBLOGO1.png"
+          alt="logo"
+        />
       </div>
 
       {/* Desktop Menu */}
       <div className="hidden sm:block">
         <ul className="flex gap-10 text-2xl font-bold">
-          <li className="hover:text-purple-400 hover:border-purple-400 hover:border-b-4">
-            <a href="/#home">Home</a>
-          </li>
-          <li className="hover:text-purple-400 hover:border-purple-400 hover:border-b-4">
-            <a href="/#about">About</a>
-          </li>
-          <li className="hover:text-purple-400 hover:border-purple-400 hover:border-b-4">
-            <a href="/#skills">Skills</a>
-          </li>
-          <li className="hover:text-purple-400 hover:border-purple-400 hover:border-b-4">
-            <a href="/#education">Education</a>
-          </li>
-          <li className="hover:text-purple-400 hover:border-purple-400 hover:border-b-4">
-            <a href="/#work">Work</a>
-          </li>
-          <li className="hover:text-purple-400 hover:border-purple-400 hover:border-b-4">
-            <a href="/#experience">Experience</a>
-          </li>
-          <li className="hover:text-purple-400 hover:border-purple-400 hover:border-b-4">
-            <a href="/#contact">Contact</a>
-          </li>
+          {sections.map((section) => (
+            <li
+              key={section}
+              className={navLinkClass(section)}
+              onClick={() => setActive(section)}
+            >
+              <a href={`/#${section}`}>
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
 
-      {/* Mobile Menu Button */}
+      {/* Mobile Button */}
       <button
         className="block sm:hidden focus:outline-none mr-5"
         onClick={() => setIsOpen(!isOpen)}
@@ -79,45 +121,23 @@ function Navbar() {
         )}
       </button>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="w-full sm:hidden bg-[#222256]/90 backdrop-blur-md py-5 px-10 absolute top-20 left-0 shadow-lg">
           <ul className="flex flex-col gap-5 text-xl font-bold">
-            <li onClick={() => setIsOpen(false)}>
-              <a className="hover:text-purple-300" href="/#home">
-                Home
-              </a>
-            </li>
-            <li onClick={() => setIsOpen(false)}>
-              <a className="hover:text-purple-300" href="/#about">
-                About
-              </a>
-            </li>
-            <li onClick={() => setIsOpen(false)}>
-              <a className="hover:text-purple-300" href="/#skills">
-                Skills
-              </a>
-            </li>
-            <li onClick={() => setIsOpen(false)}>
-              <a className="hover:text-purple-300" href="/#education">
-                Education
-              </a>
-            </li>
-            <li onClick={() => setIsOpen(false)}>
-              <a className="hover:text-purple-300" href="/#work">
-                Work
-              </a>
-            </li>
-            <li onClick={() => setIsOpen(false)}>
-              <a className="hover:text-purple-300" href="/#experience">
-                Experience
-              </a>
-            </li>
-            <li onClick={() => setIsOpen(false)}>
-              <a className="hover:text-purple-300" href="/#contact">
-                Contact
-              </a>
-            </li>
+            {sections.map((section) => (
+              <li
+                key={section}
+                onClick={() => {
+                  setActive(section);
+                  setIsOpen(false);
+                }}
+              >
+                <a className={navLinkClass(section)} href={`/#${section}`}>
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       )}

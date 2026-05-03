@@ -61,7 +61,7 @@ function Projects() {
 
   return (
     <section
-      id="projects"
+      id="work"
       className="w-full py-20 px-5 md:px-20
       bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
       border-t border-b border-[#59323f]"
@@ -69,8 +69,8 @@ function Projects() {
       {/* Heading */}
       <div className="text-center mb-16 text-white">
         <h2 className="text-5xl font-bold flex items-center justify-center gap-3">
-          <FaLaptopCode />
-          Projects <span className="text-yellow-400">Made</span>
+          <FaLaptopCode className="text-orange-400" />
+          <span className="text-orange-400">Projects</span>
         </h2>
       </div>
 
