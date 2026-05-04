@@ -91,7 +91,7 @@ npm run dev
 
 ## 📸 Preview
 
-## ![Project Screenshot](/PWSS.png)
+## [Project Screenshot](/public/PWSS.png)
 
 ## ⭐ Show Your Support
 
