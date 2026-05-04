@@ -45,7 +45,7 @@ function Contact() {
       bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]"
     >
       {/* Heading */}
-      <div className="  text-center text-white mb-10">
+      <div className="  text-center text-white mb-5">
         <h2 className="text-5xl font-bold flex text-orange-400 justify-center items-center gap-3">
           <FaAddressBook className="" />
           Contact Me

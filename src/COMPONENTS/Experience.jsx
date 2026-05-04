@@ -32,12 +32,20 @@ function Experience() {
       bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]"
     >
       {/* Heading */}
-      <div className="text-center text-white mb-20">
+      <div className="text-center text-white mb-5">
         <h2 className="text-5xl font-bold text-orange-400 flex justify-center items-center gap-3">
           <FaBriefcase className="" />
           Experience
         </h2>
+        {/* 🔥 Tagline */}
+        <p className="mt-4 text-gray-300 justify-center flex text-lg  mx-auto">
+          Every experience adds a new layer of learning, shaping skills through
+          real-world challenges.
+        </p>
       </div>
+
+      {/* Separator */}
+      <div className="w-24 h-1 bg-orange-400 mx-auto mb-16 rounded-full"></div>
 
       <div className="relative max-w-6xl mx-auto">
         {/* Timeline Line */}

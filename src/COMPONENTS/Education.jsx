@@ -35,7 +35,7 @@ function Education() {
       border-t border-b border-[#59323f]"
     >
       {/* Heading */}
-      <div className="text-center mb-16 text-white">
+      <div className="text-center mb-5 text-white">
         <h2 className="text-5xl font-bold flex items-center justify-center gap-4">
           <FaGraduationCap className="text-orange-400" />
           <span className="text-orange-400">Education</span>
@@ -46,6 +46,9 @@ function Education() {
           to think.
         </p>
       </div>
+
+      {/* Separator */}
+      <div className="w-24 h-1 bg-orange-400 mx-auto mb-16 rounded-full"></div>
 
       {/* Cards */}
       <div className="max-w-6xl mx-auto flex flex-col gap-10">

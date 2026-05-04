@@ -6,15 +6,23 @@ function About() {
     <div id="about">
       {/* Top Header */}
       <div
-        className="w-full flex justify-center md:px-20 px-5 py-5 
+        className="w-full   md:px-20 px-5 py-5 
         bg-linear-to-r from-[#222256] via-[#3a2f6a] to-[#59323f]
         text-white shadow-lg border-t border-[#59323f]"
       >
-        <h1 className="flex gap-4 font-bold text-3xl md:text-5xl text-white">
+        <h1 className="flex gap-4 font-bold   justify-center text-3xl md:text-5xl text-white">
           <FaUser className="text-orange-400" />{" "}
           <span className="text-orange-400">About</span>
         </h1>
+        {/* 🔥 Tagline */}
+        <p className="mt-4 text-gray-300 justify-center flex text-lg  mx-auto">
+          Passionate about transforming ideas into scalable and user-friendly
+          digital experiences.
+        </p>
+        <div className="w-24 h-1 bg-orange-400 mx-auto  mt-5  rounded-full"></div>
       </div>
+
+      {/* Separator */}
 
       {/* Main Section */}
       <div

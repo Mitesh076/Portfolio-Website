@@ -10,7 +10,7 @@ function Navbar() {
     "about",
     "skills",
     "education",
-    "work",
+    "projects",
     "experience",
     "contact",
   ];

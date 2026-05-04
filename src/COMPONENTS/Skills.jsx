@@ -137,7 +137,7 @@ function Skills() {
       text-white shadow-lg border-t border-b border-[#59323f]"
     >
       {/* Heading */}
-      <div className="text-center mb-10">
+      <div className="text-center mb-5">
         <h2 className="text-5xl font-bold flex items-center justify-center gap-4">
           <FaLaptopCode className="text-orange-400" />
           <span className="text-orange-400">Skills</span>
@@ -146,6 +146,9 @@ function Skills() {
           Technologies and tools I work with
         </p>
       </div>
+      
+      {/* Separator */}
+      <div className="w-24 h-1 bg-orange-400 mx-auto mb-16 rounded-full"></div>
 
       {/* Tabs */}
       <div className="flex justify-center gap-5 mb-12 flex-wrap">
