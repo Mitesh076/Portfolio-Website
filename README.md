@@ -91,7 +91,7 @@ npm run dev
 
 ## 📸 Preview
 
-## [Project Screenshot](/public/PWSS.png)
+## ![Dashboard](/public/PWSS.png)
 
 ## ⭐ Show Your Support
 
@@ -102,3 +102,5 @@ If you like this project, please ⭐ the repo and share it!
 ## 📜 License
 
 This project is open-source and available under the MIT License.
+
+[def]: /public/PWSS.png
