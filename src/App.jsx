@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./COMPONENTS/Navbar";
 
 import About from "./COMPONENTS/About";
@@ -22,6 +23,7 @@ function App() {
       <Experience />
       <Contact />
       <Footer />
+      <Analytics />
     </div>
   );
 }
