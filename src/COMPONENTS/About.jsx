@@ -35,7 +35,7 @@ function About() {
         <div className="w-full md:w-1/2 flex justify-center mt-5 md:mt-10">
           <img
             className="h-60 w-60 md:h-96 md:w-96 object-cover shadow-xl rounded-2xl border-4 border-white/20"
-            src="/src/IMAGES/P2.jpg"
+            src="/public/P2.jpg"
             alt="profile"
           />
         </div>

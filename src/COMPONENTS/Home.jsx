@@ -130,7 +130,7 @@ function Home() {
         <div className="w-full md:w-1/2 flex justify-center mt-10 md:mt-15">
           <img
             className="h-72 w-72 md:h-120 md:w-120 object-cover shadow-xl rounded-full border-4 border-white/20"
-            src="/src/IMAGES/P1.jpg"
+            src="/public/P1.jpg"
             alt="profile"
           />
         </div>

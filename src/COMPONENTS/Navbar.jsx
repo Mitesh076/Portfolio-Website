@@ -61,7 +61,7 @@ function Navbar() {
       <div className="ml-5">
         <img
           className="h-16 rounded-full"
-          src="/src/IMAGES/MBLOGO1.png"
+          src="/public/MBLOGO1.png"
           alt="logo"
         />
       </div>
