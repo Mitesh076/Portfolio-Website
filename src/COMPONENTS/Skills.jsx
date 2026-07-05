@@ -40,20 +40,6 @@ import {
 
 // ✅ Categorized Skills
 const skillCategories = {
-  languages: [
-    {
-      name: "C",
-      icon: <SiC />,
-      link: "https://en.wikipedia.org/wiki/C_(programming_language)",
-    },
-    { name: "C++", icon: <SiCplusplus />, link: "https://isocpp.org/" },
-    { name: "Python", icon: <FaPython />, link: "https://www.python.org/" },
-    {
-      name: "OOP",
-      icon: <FaCode />,
-      link: "https://en.wikipedia.org/wiki/Object-oriented_programming",
-    },
-  ],
   frontend: [
     {
       name: "HTML5",
@@ -95,6 +81,20 @@ const skillCategories = {
     { name: "MongoDB", icon: <SiMongodb />, link: "https://www.mongodb.com/" },
     { name: "NodeJS", icon: <FaNodeJs />, link: "https://nodejs.org/" },
     { name: "ExpressJS", icon: <SiExpress />, link: "https://expressjs.com/" },
+  ],
+  languages: [
+    {
+      name: "C",
+      icon: <SiC />,
+      link: "https://en.wikipedia.org/wiki/C_(programming_language)",
+    },
+    { name: "C++", icon: <SiCplusplus />, link: "https://isocpp.org/" },
+    { name: "Python", icon: <FaPython />, link: "https://www.python.org/" },
+    {
+      name: "OOP",
+      icon: <FaCode />,
+      link: "https://en.wikipedia.org/wiki/Object-oriented_programming",
+    },
   ],
   tools: [
     {
@@ -146,7 +146,7 @@ function Skills() {
           Technologies and tools I work with
         </p>
       </div>
-      
+
       {/* Separator */}
       <div className="w-24 h-1 bg-orange-400 mx-auto mb-16 rounded-full"></div>
 
