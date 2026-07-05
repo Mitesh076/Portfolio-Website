@@ -59,11 +59,7 @@ function Navbar() {
     >
       {/* Logo */}
       <div className="ml-5">
-        <img
-          className="h-16 rounded-full"
-          src="/public/MBLOGO1.png"
-          alt="logo"
-        />
+        <img className="h-16 rounded-full" src="/MBLOGO1.png" alt="logo" />
       </div>
 
       {/* Desktop Menu */}
