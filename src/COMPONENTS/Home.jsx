@@ -78,7 +78,7 @@ function Home() {
       ref={vantaRef}
       className="w-full min-h-screen flex items-center py-24 px-5 md:px-20 "
     >
-      <div className="w-full flex flex-col md:flex-row md:p-15 px-5">
+      <div className="w-full flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* LEFT CONTENT */}
         <div className="w-full md:w-1/2 md:ml-10 text-center md:mt-25 md:text-left">
           <h1 className="font-bold text-4xl md:text-5xl text-white mt-3">
@@ -129,7 +129,7 @@ function Home() {
         {/* RIGHT IMAGE */}
         <div className=" md:w-1/2 flex justify-center mt-10 md:mt-15">
           <img
-            className="h-72 w-72 md:h-120 md:w-120 object-cover shadow-xl rounded-full border-4 border-white/20"
+            className="w-64 h-64 sm:w-72 sm:h-72 md:w-[420px] md:h-[420px] object-cover rounded-full border-4 border-white/20 shadow-xl"
             src="/P1.jpg"
             alt="profile"
           />
