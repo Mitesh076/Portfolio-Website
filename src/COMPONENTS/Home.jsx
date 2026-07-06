@@ -76,7 +76,7 @@ function Home() {
     <div
       id="home"
       ref={vantaRef}
-      className="w-full min-h-screen flex items-center pt-28 md:pt-10"
+      className="w-full min-h-screen flex items-center py-24 px-5 md:px-20 "
     >
       <div className="w-full flex flex-col md:flex-row md:p-15 px-5">
         {/* LEFT CONTENT */}
@@ -94,7 +94,7 @@ function Home() {
           </h1>
 
           {/* ✅ ABOUT BUTTON (SCROLL) */}
-          <div className="w-full flex justify-center md:justify-start md:py-2">
+          <div className=" w-full flex justify-center md:justify-start md:py-2">
             <a href="#about">
               <button
                 className="flex items-center gap-3 p-4 border-2 md:w-48 shadow-[#0a0826] shadow-xl rounded-full 
@@ -107,7 +107,7 @@ function Home() {
           </div>
 
           {/* ✅ SOCIAL ICONS */}
-          <div className="w-full flex flex-wrap justify-center md:justify-start gap-5 md:gap-8 mt-5">
+          <div className=" flex flex-wrap justify-center md:justify-start gap-5 md:gap-8 mt-5">
             {socialLinks.map((item, index) => (
               <a
                 key={index}
@@ -127,7 +127,7 @@ function Home() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="w-full md:w-1/2 flex justify-center mt-10 md:mt-15">
+        <div className=" md:w-1/2 flex justify-center mt-10 md:mt-15">
           <img
             className="h-72 w-72 md:h-120 md:w-120 object-cover shadow-xl rounded-full border-4 border-white/20"
             src="/P1.jpg"

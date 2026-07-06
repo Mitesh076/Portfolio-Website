@@ -46,17 +46,17 @@ function About() {
             I'm <span className="text-orange-400">Mitesh</span>
           </h1>
 
-          <h1 className="font-semibold text-2xl md:text-3xl mt-3">
+          <h1 className="font-semibold text-orange-500 text-2xl md:text-3xl mt-3">
             Web Developer
           </h1>
 
           <p className="text-lg md:text-xl mt-5 leading-relaxed">
-            I’m Mitesh, a passionate Web Developer specializing in building
-            modern, responsive, and user-friendly web applications. I enjoy
-            turning ideas into clean, efficient code using the MERN stack.
-            Currently pursuing my B.Tech in Information Technology at MBIT (CVM
-            University), I focus on improving my skills every day through
-            real-world projects and continuous learning.
+            A passionate Web Developer specializing in building modern,
+            responsive, and user-friendly web applications. I enjoy turning
+            ideas into clean, efficient code using the MERN stack. I completed
+            my B.Tech in Information Technology from MBIT (CVM University) and
+            continuously improve my skills through real-world projects and
+            lifelong learning.
           </p>
 
           {/* Email Link */}
@@ -86,7 +86,7 @@ function About() {
           {/* Resume Button */}
           <div className="w-full flex justify-center md:justify-start">
             <a
-              href="/MITESH.pdf" // 👉 put your resume in public folder
+              href="/Mitesh_Bharvad.pdf"
               download
               className="flex items-center gap-3 p-3 px-5 border-2 rounded-full 
               hover:bg-orange-500 bg-[#0a0826] mt-6

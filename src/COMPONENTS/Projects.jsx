@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCode, FaLaptopCode } from "react-icons/fa";
+import { FaCode, FaLaptopCode, FaExternalLinkAlt } from "react-icons/fa";
 
 function Projects() {
   const projects = [
@@ -16,6 +16,7 @@ function Projects() {
       description:
         "🚀 A modern, responsive developer portfolio website built to showcase my skills, projects, and experience as a Full Stack Developer.",
       code: "https://github.com/Mitesh076/Portfolio-Website.git",
+      demo: "https://mitesh-bharvad.vercel.app/",
     },
     {
       title: "QUICKMART",
@@ -44,6 +45,7 @@ function Projects() {
       description:
         " 🚀A modern, responsive currency converter built using HTML, CSS, and JavaScript.Convert currencies instantly with a clean UI and smooth user experience.",
       code: "https://github.com/Mitesh076/Currency-Converter.git",
+      demo: "https://currency-converter-inky-three.vercel.app/",
     },
     {
       title: "TEXTUTILS",
@@ -140,6 +142,25 @@ function Projects() {
               >
                 <FaCode /> View Code
               </a>
+
+              {/* demo Button */}
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" inline-flex items-center gap-2 ml-2
+                border border-orange-400 text-black
+                px-4 py-2 rounded-lg
+                bg-orange-400
+
+                hover:text-black
+                duration-300 hover:bg-orange-600 transition"
+                >
+                  <FaExternalLinkAlt />
+                  Demo
+                </a>
+              )}
             </div>
           </div>
         ))}
